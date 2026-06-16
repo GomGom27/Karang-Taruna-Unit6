@@ -1,0 +1,408 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+}
+
+.login-page{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#0f4c81,#17c3b2);
+}
+
+.login-box{
+background:white;
+padding:40px;
+border-radius:20px;
+width:380px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.login-logo{
+width:90px;
+margin-bottom:15px;
+}
+
+.login-box input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+.login-box button{
+width:100%;
+padding:12px;
+background:#0f4c81;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.dashboard{
+display:none;
+height:100vh;
+}
+
+.sidebar{
+width:350px;
+background:#0f4c81;
+color:white;
+padding:20px;
+}
+
+.sidebar-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:30px;
+    gap:10px;
+}
+
+.judul-sidebar{
+    text-align:center;
+    flex:1;
+}
+
+.judul-sidebar h2{
+    margin:0;
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+
+.judul-sidebar h3{
+    margin-top:5px;
+    color:white;
+    font-size:16px;
+}
+
+.logo{
+width:50px;
+height:50px;
+}
+
+.sidebar ul{
+list-style:none;
+}
+
+.sidebar li{
+padding:15px;
+margin-bottom:10px;
+background:rgba(255,255,255,.1);
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+}
+
+.sidebar li:hover{
+background:#17c3b2;
+}
+
+.content{
+flex:1;
+padding:30px;
+overflow:auto;
+}
+
+.hero{
+background:linear-gradient(135deg,#0f4c81,#17c3b2);
+color:white;
+padding:50px;
+border-radius:20px;
+margin-bottom:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+margin-top:20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+table th{
+background:#0f4c81;
+color:white;
+}
+
+table th,
+table td{
+border:1px solid #ddd;
+padding:12px;
+}
+
+.hidden{
+display:none;
+}
+
+.division-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.division-card{
+background:#17c3b2;
+color:white;
+padding:30px;
+border-radius:15px;
+font-size:20px;
+text-align:center;
+font-weight:bold;
+}
+
+#search{
+padding:10px;
+width:300px;
+border:1px solid #ccc;
+border-radius:8px;
+margin-top:20px;
+}
+
+.pdf-btn{
+margin-top:20px;
+padding:12px 20px;
+background:#0f4c81;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+@media print{
+.sidebar,
+.pdf-btn{
+display:none;
+}
+
+.content{
+width:100%;
+}
+}
+
+.logout-btn{
+    margin-top:20px;
+    background:#dc3545 !important;
+}
+
+.logout-btn:hover{
+    background:#bb2d3b !important;
+}
+
+.division-card{
+    background:#17c3b2;
+    color:white;
+    padding:30px;
+    border-radius:15px;
+    font-size:20px;
+    text-align:center;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.division-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+#laporan input{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+#laporan button{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+#laporan table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+#laporan th,
+#laporan td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+#laporan th{
+    background:#1e3a8a;
+    color:white;
+}
+
+@media print {
+
+    @page {
+        margin: 15mm;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    #laporan,
+    #laporan * {
+        visibility: visible;
+    }
+
+    #laporan {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Sembunyikan form tambah agenda */
+    #laporan .card:first-of-type {
+        display: none !important;
+    }
+
+    /* Sembunyikan tombol download */
+    .pdf-btn {
+        display: none !important;
+    }
+
+    /* Sembunyikan kolom aksi */
+    #tabelKegiatan th:last-child,
+    #tabelKegiatan td:last-child {
+        display: none !important;
+    }
+
+    #laporan h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+/* Tambahkan tulisan di bawah judul */
+#laporan h1::after {
+    content: "\A KARANG TARUNA UNIT 06";
+    white-space: pre;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 8px;
+}
+
+    /* Logo kiri */
+    #laporan h1::before {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-image: url("logo kab.bdg.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+        margin-right: 20px;
+    }
+
+    /* Logo kanan */
+    #laporan h1::after {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        background-image: url("logo karta.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        vertical-align: middle;
+        margin-left: 20px;
+    }
+
+    #tabelKegiatan {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #tabelKegiatan th,
+    #tabelKegiatan td {
+        border: 1px solid black;
+        padding: 5px;
+        text-align: center;
+    }
+
+    #tabelKegiatan th {
+        background: #0f4c81 !important;
+        color: white !important;
+    }
+    .pdf-header{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.pdf-logo{
+    width:70px;
+    height:70px;
+}
+
+.pdf-header h1{
+    margin:0;
+    font-size:24px;
+}
+
+.pdf-header h3{
+    margin-top:8px;
+    font-size:16px;
+    font-weight:normal;
+}
+}

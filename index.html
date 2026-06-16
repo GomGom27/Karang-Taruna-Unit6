@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Karang Taruna Unit 06</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<!-- LOGIN -->
+
+<div id="loginPage" class="login-page">
+
+    <div class="login-box">
+
+        <img src="logo karta.png" class="login-logo">
+
+        <h1>KARANG TARUNA</h1>
+        <h3>UNIT 06</h3>
+
+        <form id="loginForm">
+
+            <input type="text"
+                   id="username"
+                   placeholder="Username"
+                   required>
+
+            <input type="password"
+                   id="password"
+                   placeholder="Password"
+                   required>
+
+            <button type="submit">
+                Login
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- DASHBOARD -->
+
+<div id="dashboard" class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-header">
+
+            <img src="logo kab.bdg.png" class="logo">
+
+            <div class="judul-sidebar">
+                <h2>KARANG TARUNA</h2>
+                <h3>UNIT 06</h3>
+            </div>
+
+            <img src="logo karta.png" class="logo">
+
+        </div>
+
+        <ul>
+
+            <li onclick="showPage('home')">
+                <i class="fas fa-house"></i> Home
+            </li>
+
+            <li onclick="showPage('visi')">
+                <i class="fas fa-bullseye"></i> Visi & Misi
+            </li>
+
+            <li onclick="showPage('struktur')">
+                <i class="fas fa-users"></i> Struktur
+            </li>
+
+            <li onclick="showPage('anggota')">
+                <i class="fas fa-user-group"></i> Anggota
+            </li>
+
+            <li onclick="showPage('divisi')">
+                <i class="fas fa-layer-group"></i> Divisi
+            </li>
+
+            <li onclick="showPage('laporan')">
+                <i class="fas fa-file-lines"></i> Laporan
+            </li>
+
+            <li class="logout-btn" onclick="logout()">
+                <i class="fas fa-right-from-bracket"></i> Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <main class="content">
+
+        <!-- HOME -->
+
+        <section id="home" class="page">
+
+            <div class="hero">
+                <center>
+                <h1>SELAMAT DATANG</h1>
+
+                <p>
+                    Sistem Informasi Karang Taruna Unit 06
+                </p>
+                </center>
+            </div>
+
+            <div class="card">
+
+                <center><h2>TENTANG ORGANISASI</h2></center>
+
+                <p>
+                    Karang Taruna Unit 06 merupakan organisasi
+                    kepemudaan yang berperan aktif dalam kegiatan
+                    sosial, pendidikan, olahraga, kesenian,
+                    keagamaan dan kewirausahaan.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+            <h2>GALERI KEGIATAN</h2>
+
+            <div class="gallery">
+
+                <img src="foto1.jpg" alt="Kegiatan 1">
+
+                <img src="foto2.jpg" alt="Kegiatan 2">
+
+                <img src="foto3.jpg" alt="Kegiatan 3">
+
+                <img src="foto4.jpg" alt="Kegiatan 4">
+
+                <img src="foto5.jpg" alt="Kegiatan 5">
+
+                <img src="foto6.jpg" alt="Kegiatan 6">
+
+        </div>
+
+        </div>
+
+        </section>
+
+        <!-- VISI MISI -->
+
+        <section id="visi" class="page hidden">
+
+            <center><h1>VISI & MISI</h1></center>
+
+            <div class="grid">
+
+                <div class="card">
+                    <center><h2>VISI</h2></center>
+                    <p>
+                        Menjadi organisasi pemuda yang aktif,
+                        kreatif, inovatif dan berkontribusi
+                        bagi masyarakat.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <center><h2>MISI</h2></center>
+                    <ul>
+                        <li>Meningkatkan kepedulian sosial.</li>
+                        <li>Mengembangkan potensi pemuda.</li>
+                        <li>Membangun jiwa kepemimpinan.</li>
+                        <li>Mendorong kewirausahaan.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- STRUKTUR -->
+
+        <section id="struktur" class="page hidden">
+
+            <center><h1>STRUKTUR KEPENGURUSAN</h1></center>
+
+            <div class="card">
+
+                <table>
+
+                    <tr>
+                        <th>JABATAN</th>
+                        <th>NAMA</th>
+                    </tr>
+
+                    <tr>
+                        <td>KETUA</td>
+                        <td>GILANG RAMADHAN</td>
+                    </tr>
+
+                    <tr>
+                        <td>SEKRETARIS 1</td>
+                        <td>HAMZAH</td>
+                    </tr>
+
+                    <tr>
+                        <td>SEKRETARIS2</td>
+                        <td>SASI</td>
+                    </tr>
+
+                    <tr>
+                        <td>BENDAHARA 1</td>
+                        <td>ARYA PUTRA D</td>
+                    </tr>
+
+                    <tr>
+                        <td>BENDAHARA 2</td>
+                        <td>SALWA KHAERUNISA R</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- ANGGOTA -->
+
+        <section id="anggota" class="page hidden">
+
+            <center><h1>DATA ANGGOTA</h1></center>
+
+            <input type="text"
+                   id="search"
+                   placeholder="Cari Nama..."
+                   onkeyup="searchMember()">
+
+            <div class="card">
+
+                <table id="memberTable">
+
+                    <tr>
+                        <th>NO</th>
+                        <th>NAMA</th>
+                        <th>RT</th>
+                        <th>NO HP</th>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Andi</td>
+                        <td>01</td>
+                        <td>08123456789</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Rina</td>
+                        <td>02</td>
+                        <td>08123456788</td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- DIVISI -->
+
+        <section id="divisi" class="page hidden">
+
+                <center><h1>DIVISI KARANG TARUNA</h1></center>
+
+            <div class="division-grid">
+
+            <div class="division-card" onclick="showDivision('pendidikan')">
+            📖 PENDIDIKAN
+        </div>
+
+            <div class="division-card" onclick="showDivision('rohani')">
+            🕌 ROHANI
+        </div>
+
+            <div class="division-card" onclick="showDivision('olahraga')">
+            ⚽ OLAHRAGA
+        </div>
+
+            <div class="division-card" onclick="showDivision('kesenian')">
+            🎨 KESENIAN
+        </div>
+
+            <div class="division-card" onclick="showDivision('kewirausahaan')">
+            💼 KEWIRAUSAHAAN
+        </div>
+
+            <div class="division-card" onclick="showDivision('pdd')">
+            📸 PDD
+        </div>
+
+        </div>
+
+            <div id="divisionDetail" class="card" style="display:none; margin-top:20px;">
+
+            <h2 id="divisionTitle"></h2>
+
+            <table id="divisionTable">
+
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>NAMA ANGGOTA</th>
+                        <th>JABATAN</th>
+                    </tr>
+                </thead>
+
+                <tbody id="divisionBody">
+                </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!-- LAPORAN -->
+
+<section id="laporan" class="page hidden">
+
+        <center>
+            <div>
+                <h1>LAPORAN DAN AGENDA KEGIATAN</h1>
+                <h3>KARANG TARUNA UNIT 06</h3>
+            </div>
+        </center>
+
+    <div class="card">
+
+        <h3>Tambah Agenda Kegiatan</h3>
+
+        <input type="date" id="tglKegiatan">
+
+        <input type="text"
+               id="namaKegiatan"
+               placeholder="Nama Kegiatan">
+
+        <input type="text"
+               id="lokasiKegiatan"
+               placeholder="Lokasi Kegiatan">
+
+        <button onclick="tambahKegiatan()">
+            Tambah Agenda
+        </button>
+
+    </div>
+
+    <div class="card">
+
+        <table id="tabelKegiatan">
+
+            <thead>
+                <tr>
+                    <th>TANGGAL</th>
+                    <th>KEGIATAN</th>
+                    <th>LOKASI</th>
+                    <th>AKSI</th>
+                </tr>
+            </thead>
+
+            <tbody id="tbodyKegiatan">
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <button class="pdf-btn" onclick="exportPDF()">
+        Download PDF
+    </button>
+
+</section>
+    </main>
+
+</div>
+
+<img id="logoKiri" src="logo kab.bdg.png" style="display:none;">
+<img id="logoKanan" src="logo karta.png" style="display:none;">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
